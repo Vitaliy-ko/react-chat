@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Spinner } from '../../components/Spinner';
 import { v4 as uuidv4 } from 'uuid';
 
-import WillSmith from './../../assets/images/WillSmith.jpg';
+import { Spinner } from '../../components/Spinner';
 import { container } from './chat.module.scss';
 import { MessageArea } from '../../components/MessageArea';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { InputMessage } from '../../components/InputMessage';
+import WillSmith from './../../assets/images/WillSmith.jpg';
 
 export const Chat = () => {
   const currentUserId = '111';
@@ -63,7 +63,7 @@ export const Chat = () => {
 
   const likeMessage = (messageId, currentUserId) => {
     const newMessagesList = [...messages];
-    const likeMessageIndex = getMessageIndex(messageId)
+    const likeMessageIndex = getMessageIndex(messageId);
     const editedMessage = messages[likeMessageIndex];
     const isMessageLiked = editedMessage.like && editedMessage.like.has(currentUserId);
 
