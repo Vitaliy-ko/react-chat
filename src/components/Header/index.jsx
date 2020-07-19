@@ -29,6 +29,7 @@ export const Header = ({ messages }) => {
   return (
     <div className={styles.header}>
       <div className={styles.container}>
+        <p>Chat-X</p>
         <p>Users count: {users.length}</p>
         <p>Messages count: {messages.length}</p>
         <p>Last message: {moment(lastMessageDate).fromNow()}</p>
